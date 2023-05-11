@@ -8,7 +8,9 @@
   </tr>
   <tr class="data-row" *ngFor="let satellite of satellites">
     <td>{{ satellite.name }}</td>
-    <td>{{ satellite.type }}</td>
+    <td satellite.isSpaceDebris() .warning { background-color: red;>
+      {{ satellite.type }}
+    </td>
     <td>{{ satellite.launchDate }}</td>
     <td>{{ satellite.orbitType }}</td>
     <td>{{ satellite.operational }}</td>
@@ -20,12 +22,10 @@
 
 <td>
   <script>
-    if(satellite.isSpaceDebris() === true){
-             <div class="alert alert-warning">
-        <strong>Warning!</strong> Space Debris
-            <style>
-        {{satellite.type}} background-color: red;</style>
+        if(satellite.isSpaceDebris() === true){
+            document.getElementByName.warning {
+    	background-color: #da8a8a;
+    }
         }
-           </div>
   </script>
 </td>
