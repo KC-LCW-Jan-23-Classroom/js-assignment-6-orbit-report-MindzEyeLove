@@ -7,16 +7,11 @@
     <th>Launch Date</th>
   </tr>
   <tr class="data-row" *ngFor="let satellite of satellites">
-    <td>{{ satellite.type }}</td>
-    <td>{{ satellite.launchDate }}</td>
-    <td>{{ satellite.orbitType }}</td>
+    <td>{{ satellite.name }}</td>
+    <td [class.warning]="satellite.isSpaceDebris()">{{ satellite.type }}</td>
     <td>{{ satellite.operational }}</td>
-    <!-- <td *ngIf="Satellite.isSpaceDebris() === true">
-      {{ satellite.type }}
-      <style>
-        .warning {background-color: red;}
-      </style>
-    </td> -->
+    <td>{{ satellite.orbitType }}</td>
+    <td>{{ satellite.launchDate }}</td>
   </tr>
 </table>
 
